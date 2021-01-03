@@ -1,0 +1,8 @@
+__pycache__
+build
+dist
+etc
+naver
+Output
+*.spec
+test.py

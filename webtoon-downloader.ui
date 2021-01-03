@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>342</width>
+    <height>211</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Jcop Webtoon Downloader</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>301</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBox_webtoon_type">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>Naver Comic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kakao Page</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Daum Webtoon</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lezhin Comics</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Episodes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_start"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>~</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_end"/>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>DeviceID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEdit_deviceid"/>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_id"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Search">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>img/search_icon.png</normaloff>img/search_icon.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_download">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Download</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <zorder>pushButton_download</zorder>
+   <zorder>formLayoutWidget</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>342</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <widget class="QMenu" name="menuGenerate_Cookie_Data">
+     <property name="title">
+      <string>Generate Cookie Data</string>
+     </property>
+     <addaction name="actionNaver_Comic"/>
+     <addaction name="actionKakao_Page"/>
+     <addaction name="actionLezhin_Comics"/>
+    </widget>
+    <addaction name="menuGenerate_Cookie_Data"/>
+    <addaction name="actionDefault_Directory"/>
+   </widget>
+   <widget class="QMenu" name="menuVersion">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionVersion"/>
+    <addaction name="actionVisit_Blog_3"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>Tool</string>
+    </property>
+    <addaction name="actionOpen_Download_Folder"/>
+   </widget>
+   <addaction name="menuSetting"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuVersion"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRead_Cookie_Data">
+   <property name="text">
+    <string>Read Cookie Data</string>
+   </property>
+  </action>
+  <action name="actionVersion">
+   <property name="text">
+    <string>Version</string>
+   </property>
+  </action>
+  <action name="actionNaver_Comic">
+   <property name="text">
+    <string>Naver Comic</string>
+   </property>
+  </action>
+  <action name="actionKakao_Page">
+   <property name="text">
+    <string>Kakao Page</string>
+   </property>
+  </action>
+  <action name="actionLezhin_Comics">
+   <property name="text">
+    <string>Lezhin Comics</string>
+   </property>
+  </action>
+  <action name="actionDaum_Webtoon">
+   <property name="text">
+    <string>Daum Webtoon</string>
+   </property>
+  </action>
+  <action name="actionVisit_Blog">
+   <property name="text">
+    <string>Visit Blog</string>
+   </property>
+  </action>
+  <action name="actionVisit_Blog_2">
+   <property name="text">
+    <string>Visit Blog</string>
+   </property>
+  </action>
+  <action name="actionDefault_Directory">
+   <property name="text">
+    <string>Default Directory</string>
+   </property>
+  </action>
+  <action name="actionFolder_Type">
+   <property name="text">
+    <string>Folder Type</string>
+   </property>
+  </action>
+  <action name="actionRead_Cookie_Data_v1_4">
+   <property name="text">
+    <string>Read Cookie Data (v1.4)</string>
+   </property>
+  </action>
+  <action name="actionVisit_Blog_3">
+   <property name="text">
+    <string>Visit Blog</string>
+   </property>
+  </action>
+  <action name="actionOpen_Download_Folder">
+   <property name="text">
+    <string>Open Download Folder</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
